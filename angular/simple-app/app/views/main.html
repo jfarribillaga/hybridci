@@ -1,0 +1,17 @@
+<div class="main-container" ng-controller="MainCtrl">
+
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+        <ul>
+            <li><a href="" ng-click="changePage('/form')">Form</a></li>
+            <li><a href="" ng-click="changePage('/carousel')">Carousel</a></li>
+            <li><a href="" ng-click="changePage('/items')">Items</a></li>
+            <!-- <li><a href="#/form">Form</a></li>
+            <li><a href="#/carousel">Carousel</a></li>
+            <li><a href="#/items">Items</a></li> -->
+        </ul>
+    </div>
+
+    <!-- <div id="pageContent" ng-include src="partialTemplate"></div> -->
+    <div id="pageContent" ui-view="content"></div>
+
+</div>

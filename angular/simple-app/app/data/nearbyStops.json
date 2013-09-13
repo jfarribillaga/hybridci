@@ -1,0 +1,74 @@
+{
+     "nearbyStops":[
+        {
+            "stopId":1,
+            "agency":"SF Muni",
+            "line":"M",
+            "distance":0.1,
+            "time":"1, 15"
+        },
+        {
+            "stopId":2,
+            "agency":"SF Muni 2",
+            "line":"N",
+            "distance":0.1,
+            "time":"2, 17"
+        },
+        {
+            "stopId":3,
+            "agency":"SF Muni 3",
+            "line":"N",
+            "distance":0.1,
+            "time":"3, 30"
+        },
+        {
+            "stopId":4,
+            "agency":"SF Muni 4",
+            "line":"N",
+            "distance":0.2,
+            "time":"5, delayed"
+        },
+        {
+            "stopId":5,
+            "agency":"Samstrans",
+            "line":"221",
+            "distance":0.5,
+            "time":"8, 45"
+        },
+        {
+            "stopId":6,
+            "agency":"SF Muni 5",
+            "line":"M",
+            "distance":0.1,
+            "time":"1, 15"
+        },
+        {
+            "stopId":7,
+            "agency":"SF Muni 6",
+            "line":"N",
+            "distance":0.1,
+            "time":"2, 17"
+        },
+        {
+            "stopId":8,
+            "agency":"SF Muni 7",
+            "line":"N",
+            "distance":0.1,
+            "time":"3, 30"
+        },
+        {
+            "stopId":9,
+            "agency":"SF Muni 8",
+            "line":"N",
+            "distance":0.2,
+            "time":"5, delayed"
+        },
+        {
+            "stopId":10,
+            "agency":"Samstrans 2",
+            "line":"221",
+            "distance":0.5,
+            "time":"8, 45"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+<div ng-controller="ItemsCtrl">
+    <h6>Name: {{model.name}} (defined in the parent scope)</h6>
+    <h1>items</h1>
+    <p>(tap on them to see the details below)</p>
+
+    <table class="pure-table">
+        <thead>
+            <tr>
+                <th>Stop id</th>
+                <th>Agency</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="item in items" ng-class-odd="'pure-table-odd'" ng-style="item.rowStyle" ng-click="showDetails(item)">
+                <td>{{item.stopId}}</td>
+                <td>{{item.agency}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div ui-view="itemDetails"></div>
+</div>

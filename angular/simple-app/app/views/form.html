@@ -1,0 +1,34 @@
+<div ng-controller="FormCtrl">
+    <h6>Name: {{model.name}} (defined in the parent scope)</h6>
+
+    <form class="pure-form pure-form-stacked">
+        <p>
+            <strong>Add content in the first input, then in the second, and then in the first again.</strong>
+        </p>
+
+        <fieldset>
+            <legend>using ng-module with variables on scope</legend>
+            <div>
+                <input type="text" ng-model="inputValue">
+                <div ng-controller="InnerFormController">
+                    <input type="text" ng-model="inputValue">
+                    <p ng-show="inputValue && $parent.inputValue && inputValue != $parent.inputValue">The communication between the inputs is now broken.</p>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>using ng-module with variables on a model (and the model is on the scope)</legend>
+            <div>
+                <input type="text" ng-model="testForm.inputValue">
+                <div ng-controller="InnerFormController">
+                    <input type="text" ng-model="testForm.inputValue">
+                    <p ng-show="testForm.inputValue && testForm.inputValue == $parent.testForm.inputValue">The communication is never broken.</p>
+                </div>
+            </div>
+        </fieldset>
+
+
+    </form>
+
+</div>

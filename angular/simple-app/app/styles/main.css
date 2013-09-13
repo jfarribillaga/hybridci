@@ -1,0 +1,35 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.main-container {
+    margin: 20px auto;
+    width: 91%;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    /*background-color: #eee;*/
+    border-radius: 6px;
+    /*padding: 60px;*/
+}
+
+.pure-button-large {
+    font-size: 110%;
+}
+
+.item-details-container{
+    background: #e3e3e3;
+    border: 1px solid #f4f4f4;
+    border-radius: 3px;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.item-details-container h3,
+.item-details-container p{
+    margin: 0;
+    padding: 0;
+}
