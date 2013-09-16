@@ -4,4 +4,4 @@ npm -g install phantomjs
 npm install
 bower install
 
-grunt test
+grunt single-run-unit-tests

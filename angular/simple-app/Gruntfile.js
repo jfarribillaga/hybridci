@@ -246,8 +246,18 @@ module.exports = function (grunt) {
       ]
     },
     karma: {
-      unit: {
+      'run-unit-tests': {
         configFile: 'karma.conf.js'
+      },
+      'single-run-unit-tests': {
+        configFile: 'karma.conf.js',
+        options: {
+          singleRun: true,
+          autoWatch: false
+        }
+      },
+      'run-e2e-tests': {
+        configFile: 'karma-e2e.conf.js'
       }
     },
     cdnify: {
@@ -290,12 +300,21 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('test', [
+  grunt.registerTask('run-unit-tests', [
+    'karma:run-unit-tests'
+  ]);
+
+  grunt.registerTask('run-e2e-tests', [
+    'connect:test',
+    'karma:run-e2e-tests'
+  ]);
+
+  grunt.registerTask('single-run-unit-tests', [
     'clean:server',
     'concurrent:test',
     'connect:test',
-    'karma'
-  ]);
+    'karma:single-run-unit-tests'
+    ]);
 
   grunt.registerTask('build', [
     'clean:dist',
@@ -313,7 +332,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     // 'jshint',
-    'test',
+    'single-run-unit-tests',
     'build'
   ]);
 };
