@@ -1,0 +1,1 @@
+echo 'build failed' >> build.log

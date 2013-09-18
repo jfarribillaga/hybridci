@@ -1,0 +1,19 @@
+{
+    "duplicate-properties": true,
+    "empty-rules": true,
+    "known-properties": true,
+    "font-faces": true,
+    "box-model": false,
+    "universal-selector": true,
+    "unqualified-attributes": true,
+    "zero-units": true,
+    "overqualified-elements": true,
+    "shorthand": true,
+    "duplicate-background-images": true,
+    "font-sizes": true,
+    "ids": true,
+    "important": false,
+    "qualified-headings": false,
+    "outline-none": false,
+    "unique-headings": false
+}
