@@ -25,7 +25,8 @@
     "connect-livereload": "~0.2.0",
     "grunt-google-cdn": "~0.2.0",
     "grunt-ngmin": "~0.0.2",
-    "karma-phantomjs-launcher": "~0.1.0"
+    "karma-phantomjs-launcher": "~0.1.0",
+    "grunt-contrib-csslint": "~0.1.2"
   },
   "engines": {
     "node": ">=0.8.0"
