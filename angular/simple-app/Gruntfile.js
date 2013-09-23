@@ -460,7 +460,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'connect:livereload',
-    'copy:appcache',
     'watch'
   ]);
 };

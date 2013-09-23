@@ -3,15 +3,6 @@
 angular.module('demo', ['ngResource', 'ui.router'])
     .config(function ($stateProvider) {
 
-        // $routeProvider
-        //     .when('/', {
-        //         templateUrl: 'views/main.html',
-        //         controller: 'MainCtrl'
-        //     })
-        //     .otherwise({
-        //         redirectTo: '/'
-        //     });
-
         var main = {
             name: 'main',
             url: '',
