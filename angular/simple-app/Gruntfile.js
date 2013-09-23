@@ -370,7 +370,7 @@ module.exports = function (grunt) {
       'run-e2e-tests': {
         configFile: 'karma-e2e.conf.js'
       },
-      'run-e2e-tests': {
+      'single-run-e2e-tests': {
         configFile: 'karma-e2e.conf.js',
         options: {
           singleRun: true,
