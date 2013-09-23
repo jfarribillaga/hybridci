@@ -10,17 +10,17 @@ module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   // configurable paths
-  var addConfig = {
+  var appConfig = {
     app: 'app',
     dist: 'dist'
   };
 
   try {
-    addConfig.app = require('./bower.json').appPath || addConfig.app;
+    appConfig.app = require('./bower.json').appPath || appConfig.app;
   } catch (e) {}
 
   grunt.initConfig({
-    config: addConfig,
+    config: appConfig,
     watch: {
       livereload: {
         optios: {
@@ -46,7 +46,7 @@ module.exports = function (grunt) {
             return [
               lrSnippet,
               mountFolder(connect, '.tmp'),
-              mountFolder(connect, addConfig.app)
+              mountFolder(connect, appConfig.app)
             ];
           }
         }
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
         options: {
           middleware: function (connect) {
             return [
-              mountFolder(connect, addConfig.dist)
+              mountFolder(connect, appConfig.dist)
             ];
           }
         }
@@ -180,17 +180,6 @@ module.exports = function (grunt) {
       }
     },
     concurrent: {
-      server: [
-        'coffee:dist'
-      ],
-      test: [
-        'coffee'
-      ],
-      dist: [
-        'coffee',
-        'imagemin',
-        'htmlmin'
-      ]
     },
     karma: {
       'run-unit-tests': {
@@ -233,6 +222,7 @@ module.exports = function (grunt) {
     }
   });
 
+  //load any task on grunt-tasks directory
   grunt.loadTasks('grunt-tasks');
 
   grunt.registerTask('server', function (target) {
@@ -242,7 +232,6 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'concurrent:server',
       'connect:livereload',
       'open',
       'watch'
@@ -250,25 +239,25 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('run-unit-tests', [
+    'jshint',
     'karma:run-unit-tests'
   ]);
 
   grunt.registerTask('run-e2e-tests', [
+    'jshint',
     'connect:test',
     'karma:run-e2e-tests'
   ]);
 
   grunt.registerTask('single-run-unit-tests', [
-    'clean:server',
-    'concurrent:test',
-    'connect:test',
-    'karma:single-run-unit-tests'
+      'jshint',
+      'connect:test',
+      'karma:single-run-unit-tests'
     ]);
 
   grunt.registerTask('build', [
     'clean:dist',
     'useminPrepare',
-    'concurrent:dist',
     'concat',
     'copy',
     'cdnify',
@@ -280,7 +269,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    // 'jshint',
+    'jshint',
     'single-run-unit-tests',
     'build'
   ]);

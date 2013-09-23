@@ -1,1 +1,1 @@
-echo 'build failed' >> build.log
+echo 'build number ${BUILD_NUMBER} failed' >> build.log
