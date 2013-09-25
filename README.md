@@ -1,4 +1,0 @@
-hybridci
-========
-
-HybridCI POC
