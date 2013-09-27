@@ -1,1 +1,1 @@
-echo 'build number ${BUILD_NUMBER} succedded' >> build.log
+echo 'build number $BUILD_NUMBER succedded' >> build.log
