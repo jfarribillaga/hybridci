@@ -1,1 +1,1 @@
-echo build number $BUILD_NUMBER failed >> build.log
+echo "$BUILD_TAG failed on $BUILD_ID" >> build.log

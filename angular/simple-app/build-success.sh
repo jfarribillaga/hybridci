@@ -1,1 +1,1 @@
-echo build number $BUILD_NUMBER succedded >> build.log
+echo "$BUILD_TAG succedded on $BUILD_ID" >> build.log
