@@ -438,6 +438,8 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('single-run-unit-tests', [
+    'copy:bowerComponents',
+    'copy:dev',
     'connect:test',
     'karma:single-run-unit-tests'
   ]);
